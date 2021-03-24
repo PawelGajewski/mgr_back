@@ -3,6 +3,7 @@ from . import views
 from znaki.znaki import urls
 
 urlpatterns = [
+    path(r'^api_auth/', include('rest_framework.urls')),
     path('', views.index, name='index'),
-    path('hello/', include(urls))
+    path('api/', include(urls))
 ]
